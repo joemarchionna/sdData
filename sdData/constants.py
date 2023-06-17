@@ -1,0 +1,8 @@
+LINE_TERMINATOR = "\n"
+ALL_FIELDS = "__all_fields__"
+SD_META_PREFIX = ">  <"
+SD_RECORD_TERMINATOR = "$$$$"
+MOL_JSON_KEY = "__mol__"
+MOL_JSON_LINE_TERMINATOR = "||||"
+CSV_DELIMITER = ","
+MULTI_LINE_DELIM = "|"
