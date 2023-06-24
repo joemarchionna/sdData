@@ -1,16 +1,19 @@
-sdData - Testing Python Package Deployment
-============================================
-Project Description
+sdData - Structured Chemical Definition Handling
+================================================
+This is a very simple library that handles very basic tasks, mostly with the metadata
+associated with each structure definition. It provides an easy interface to read and
+write sdf files, csv, files, and json files - all for the same data. The resulting file 
+contents are easily changed as the metadata is a dictionary.
 
 Installation
 ============
-<p>This is meant to be used as a library. To install this project manually (if not automatically installed) in another project run the following command:
+<p>This can be used from the command line or as a library. To install this project manually (if not automatically installed) in another project run the following command:
 
 ```
     $ pip install git+ssh://git@github.com/joemarchionna/sdData.git
 ```
 
-<p>This is not meant to be used as a library. To run, create a virtual environment and then add the dependancies with this command:
+<p>To run from the command line, create a virtual environment and then add the dependancies with this command:
 
 ```
     $ pip install -r requirements/prod.txt
@@ -19,14 +22,13 @@ Installation
 To run this project use the following command:
 
 ```
-    $ pip install git+ssh://git@github.com/joemarchionna/sdData.git
+    $ python sdData/cmd.py -h
 ```
 
 If cloning this project to make updates, create a virtual environment and then add the dependancies with one of the following commands:
 
 ```
     $ pip install -r requirements/dev.txt
-	$ pip install -r requirements/devlocal.txt
 ```
 
 Dependancies
@@ -41,14 +43,14 @@ To run all tests in the project:
 
 ```
     $ source env/Scripts/activate
-    $ python -m unittest discover -s sdData/tests/
+    $ python -m unittest discover -s tests/
 ```
 
 To run a specific test in the project:
 
 ```
     $ source env/Scripts/activate
-	$ python -m unittest sdData/tests/<module>.py
+	$ python -m unittest tests/<module>.py
 ```
 
 Code Formatting

@@ -3,8 +3,9 @@ from sdData.parser.textParser import TextParser
 from sdData.structure import Structure
 
 
-def readFile(loggerName: str, reader) -> list:
+def readFile(loggerName: str, reader, recordCompleteCallback=None) -> list[Structure]:
     parser = TextParser(loggerName)
+    parser.subscribe(recordCompleteCallback)
     l = reader.readline()
     while l:
         parser.parseLine(l)
@@ -12,7 +13,7 @@ def readFile(loggerName: str, reader) -> list:
     return parser.records
 
 
-def openFile(loggerName: str, filename: str) -> list:
+def openFile(loggerName: str, filename: str) -> list[Structure]:
     with open(filename) as fr:
         return readFile(loggerName, fr)
 

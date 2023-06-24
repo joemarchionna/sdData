@@ -1,4 +1,6 @@
 include *.md
 include requirements/*.txt
 recursive-include docs *.md
+prune sdData/commands
+prune sdData/setup
 prune tests

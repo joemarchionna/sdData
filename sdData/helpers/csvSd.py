@@ -20,6 +20,18 @@ def writeCsv(
     fileWriter.write(lineTerm)
 
 
+# def writeCsvHeader(
+#     fileWriter,
+#     sdStructure: Structure,
+#     metaFieldNames: list,
+#     delimiter: str = CSV_DELIMITER,
+#     multiLineDelim: str = MULTI_LINE_DELIM,
+#     lineTerm: str = LINE_TERMINATOR,
+# ):
+#     if metaFieldNames[0] == ALL_FIELDS:
+#         metaFieldNames = list(str(x) for x in sdStructures[0].meta.keys())
+
+
 def saveCsv(
     filename,
     sdStructures: list,

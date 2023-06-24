@@ -11,6 +11,11 @@ class TextParser(object):
         self.currentState = StructureState(self)
         self.currentRecord = Structure()
         self.records = []
+        self.callbk = None
+        self.metaKeys = []
+
+    def subscribe(self, callback):
+        self.callbk = callback
 
     def parseLine(self, txt: str):
         resp = self.currentState.handleLine(txt.rstrip())
@@ -26,4 +31,7 @@ class TextParser(object):
             # change to a new record
             if resp.event == StateEvent.RECORD_END:
                 self.records.append(self.currentRecord)
+                if self.callbk:
+                    self.logger.debug("Calling Callback...")
+                    self.callbk(self.currentRecord)
                 self.currentRecord = Structure()

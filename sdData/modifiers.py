@@ -46,6 +46,4 @@ def validateStructure(record: Structure):
             if values[0].startswith("M"):
                 errors.append("Structure Data On Line 4 (1-N): This Is Typically Due To Too Few Header Lines")
             elif not values[0].isnumeric():
-                errors.append(
-                    "The Data On Line 4 (1-N) Is Not Numeric: This Is Typically Because Of An Extra Header Line"
-                )
+                errors.append("The Data On Line 4 (1-N) Is Not Numeric: This Is Typically Because Of An Extra Header Line")

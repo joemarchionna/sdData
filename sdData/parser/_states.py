@@ -52,6 +52,8 @@ class FieldNameState(_baseState):
             return StateResponse(StateEvent.RECORD_END)
         fieldName = self._getFieldName(fileLine)
         if fieldName:
+            if fieldName not in self.context.metaKeys:
+                self.context.metaKeys.append(fieldName)
             return StateResponse(StateEvent.PARSED_FIELD_NAME, txt=fieldName)
         raise Exception("I shouldn't be here :-(")
 
