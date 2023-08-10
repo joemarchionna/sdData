@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2023 08 10
+### Added
+- txt helper and associated tests
+- Structure addMetadata method
+### Changed
+- package Exception name 
+
 ## [1.0.0] - 2023 06 24
 ### Added
 - cmd.py logic

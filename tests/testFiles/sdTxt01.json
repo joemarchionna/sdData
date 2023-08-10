@@ -1,0 +1,4 @@
+{
+    "mol": "\n  SciTegic11182117232D\n\n 16 16  0  0  0  0            999 V2000\n   -0.8032   -1.0775    0.0000 C   0  0\n   -0.0186   -0.8225    0.0000 C   0  0\n   0.1529   -0.0156    0.0000 S   0  0\n   0.9599   -0.1871    0.0000 O   0  0\n   -0.6541    0.1560    0.0000 O   0  0\n 11 12  1  0\n 12 13  1  0\n 13 14  2  0\n 13 15  1  0\n 15 16  3  0\nM  END",
+    "comment": "the above mol file is not a valid mol file, this is just for testing"
+}

@@ -1,6 +1,6 @@
-class SdfileException(Exception):
+class SdFileException(Exception):
     pass
 
 
-class SdParameterException(SdfileException):
+class SdParameterException(SdFileException):
     pass

@@ -3,7 +3,7 @@ from sdData.structure import Structure
 import json
 
 
-def _getStructureRecord(jsonStructure: dict, jsonLineDelim: str):
+def _getStructureRecord(jsonStructure: dict, jsonLineDelim: str) -> Structure:
     s = Structure()
     s.mol = jsonStructure[MOL_JSON_KEY].split(jsonLineDelim)
     jsonStructure.pop(MOL_JSON_KEY)
@@ -11,7 +11,7 @@ def _getStructureRecord(jsonStructure: dict, jsonLineDelim: str):
     return s
 
 
-def loadStr(txt: str, jsonLineDelim: str = MOL_JSON_LINE_TERMINATOR) -> list:
+def loadStr(txt: str, jsonLineDelim: str = MOL_JSON_LINE_TERMINATOR) -> list[Structure]:
     records = []
     jsonData = json.loads(txt)
     for r in jsonData:
@@ -19,7 +19,7 @@ def loadStr(txt: str, jsonLineDelim: str = MOL_JSON_LINE_TERMINATOR) -> list:
     return records
 
 
-def loadFile(reader, jsonLineDelim: str = MOL_JSON_LINE_TERMINATOR) -> list:
+def loadFile(reader, jsonLineDelim: str = MOL_JSON_LINE_TERMINATOR) -> list[Structure]:
     records = []
     jsonData = json.load(reader)
     for r in jsonData:
