@@ -10,6 +10,9 @@ class SdFile(object):
         self.records = []
         self.fn = None
 
+    def getRecords(self)->list[Structure]:
+        return self.records
+
     def count(self):
         return len(self.records)
 

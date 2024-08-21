@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2024 08 21
+### Added
+- getRecords method to SdFile
+- SdFile and Structure references to project init
+
 ## [1.1.0] - 2023 08 10
 ### Added
 - txt helper and associated tests
