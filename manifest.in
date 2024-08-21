@@ -1,5 +1,5 @@
 include *.md
-include requirements/*.txt
+include requirements/prod.txt
 recursive-include docs *.md
 prune sdData/commands
 prune sdData/setup
